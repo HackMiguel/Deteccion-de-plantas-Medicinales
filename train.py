@@ -8,7 +8,7 @@ from tensorflow.python.keras.layers import  Convolution2D, MaxPooling2D
 from tensorflow.python.keras import backend as K
 
 K.clear_session()
-
+#cambiar la direccion de las carpetas dependiendo el caso.
 data_entrenamiento = '/home/angel/Escritorio/ProyectoFinal/data/entrenamiento'
 data_validacion = '/home/angel/Escritorio/ProyectoFinal/data/validacion'
 
