@@ -6,8 +6,9 @@ from keras.initializers import glorot_uniform
 from keras.utils import CustomObjectScope
 import sys
 import os
-
+#puede Cambiar
 longitud, altura = 150, 150
+#Cambiar la ubicacion de las carpetas segun el caso.
 modelo = '/home/angel/Escritorio/ProyectoFinal/modelo/modelo.h5'
 pesos_modelo = '/home/angel/Escritorio/ProyectoFinal/modelo/pesos.h5'
 
@@ -15,6 +16,7 @@ with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
         cnn = load_model(modelo)
 #cnn = load_model(modelo)
 cnn.load_weights(pesos_modelo)
+#escribimos los resultados en un archivo de texto
 def met(anwer, py):
 	os.system('python3 /home/angel/Escritorio/ProyectoFinal/Audio/'+py)
 	f = open('hola.txt','w')
@@ -24,7 +26,6 @@ def met(anwer, py):
 	sys.exit()
 
 
-	#os.system('python3 /home/aaa/Escritorio/ProyectoFinal/camara.py')
 def predict(file):
 	x = load_img(file, target_size=(longitud, altura))
 	x = img_to_array(x)
@@ -108,6 +109,7 @@ def predict(file):
 		print("prediccion: Zanahoria")
 		print(array[0])
 	return (planta,info)
+#Quitar comentarios si quieres ver los resultados por consola y ejecuta solo este archivo.
 #predict('pruebas/sabila56.jpg')
 		
 #diente de leon -> por hierba buena
