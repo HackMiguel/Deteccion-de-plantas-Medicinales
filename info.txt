@@ -1,3 +1,0 @@
-train -> nueva red neuronal
-tran2 -> sin ningun tipo de grafica de resultado
-train_graf ->grafica de historial de entrenamiento
